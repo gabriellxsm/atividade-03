@@ -1,0 +1,20 @@
+#include using namespace std;
+
+int main() { int N;
+
+cout << "Digite o valor de N: ";
+cin >> N;
+
+// Verifica se o valor de N é válido (não-negativo)
+if (N < 0) {
+    cout << "O valor de N deve ser um número natural (não-negativo)." << endl;
+    return 1;
+}
+
+// Calcula a soma usando a fórmula
+int soma = N * (N + 1) / 2;
+
+cout << "A soma dos primeiros " << N << " números naturais é: " << soma << endl;
+
+return 0;
+}
