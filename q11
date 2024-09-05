@@ -1,0 +1,31 @@
+#include using namespace std;
+
+// Função para verificar se um número é primo bool isPrime(int num) { // Números menores ou iguais a 1 não são primos if (num <= 1) return false;
+
+// 2 é o único número par que é primo
+if (num == 2) return true;
+
+// Números pares maiores que 2 não são primos
+if (num % 2 == 0) return false;
+
+// Verifica se o número é divisível por qualquer número ímpar
+for (int i = 3; i * i <= num; i += 2) {
+    if (num % i == 0) return false;
+}
+
+return true;
+}
+
+int main() { int num;
+
+cout << "Digite um número: ";
+cin >> num;
+
+if (isPrime(num)) {
+    cout << num << " é um número primo." << endl;
+} else {
+    cout << num << " não é um número primo." << endl;
+}
+
+return 0;
+}
