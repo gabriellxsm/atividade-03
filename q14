@@ -1,0 +1,37 @@
+
+#include using namespace std;
+
+int main() { int N;
+
+cout << "Digite o valor de N (número de termos): ";
+cin >> N;
+
+// Verifica se o valor de N é válido (positivo)
+if (N <= 0) {
+    cout << "O valor de N deve ser um número positivo." << endl;
+    return 1;
+}
+
+// Variáveis para armazenar os termos da sequência de Fibonacci
+long long a = 0, b = 1, c;
+
+cout << "Os primeiros " << N << " termos da sequência de Fibonacci são:" << endl;
+
+// Exibe o primeiro termo
+if (N >= 1) cout << a << " ";
+
+// Exibe o segundo termo
+if (N >= 2) cout << b << " ";
+
+// Calcula e exibe os termos seguintes
+for (int i = 3; i <= N; ++i) {
+    c = a + b;
+    cout << c << " ";
+    a = b;
+    b = c;
+}
+
+cout << endl;
+
+return 0;
+}
